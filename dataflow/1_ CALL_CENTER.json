@@ -1,0 +1,53 @@
+{
+	"name": "1_ CALL_CENTER",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "SnowflakeDataSetCallCenter",
+						"type": "DatasetReference"
+					},
+					"name": "snowflakecallcenter",
+					"description": "\nCALL_CENTER table from snowflake"
+				}
+			],
+			"sinks": [
+				{
+					"linkedService": {
+						"referenceName": "mj-synpase-lakehouse-WorkspaceDefaultStorage",
+						"type": "LinkedServiceReference"
+					},
+					"name": "callcentertable"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     limit: 100,",
+				"     query: 'select * from SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CALL_CENTER',",
+				"     format: 'query') ~> snowflakecallcenter",
+				"snowflakecallcenter sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'delta',",
+				"     fileSystem: 'lakeshouse',",
+				"     folderPath: 'synapse/workspaces/mj-synpase-lakehouse/Bronze/CallCenter',",
+				"     mergeSchema: false,",
+				"     autoCompact: false,",
+				"     optimizedWrite: false,",
+				"     vacuum: 0,",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> callcentertable"
+			]
+		}
+	}
+}

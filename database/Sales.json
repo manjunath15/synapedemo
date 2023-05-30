@@ -1,0 +1,22 @@
+{
+	"name": "Sales",
+	"properties": {
+		"Name": "Sales",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://lakeshouse@mjlakeshousestroage.dfs.core.windows.net/Sales",
+			"Properties": {
+				"FormatType": "parquet",
+				"LinkedServiceName": "mj-synpase-lakehouse-WorkspaceDefaultStorage"
+			}
+		}
+	},
+	"type": "DATABASE"
+}

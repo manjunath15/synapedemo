@@ -1,0 +1,32 @@
+{
+	"name": "snowflake_datacopy",
+	"properties": {
+		"activities": [
+			{
+				"name": "copy_ CALL_CENTER",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "1_ CALL_CENTER",
+						"type": "DataFlowReference"
+					},
+					"integrationRuntime": {
+						"referenceName": "AutoResolveIntegrationRuntime",
+						"type": "IntegrationRuntimeReference"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
