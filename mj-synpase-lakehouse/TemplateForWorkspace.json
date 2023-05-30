@@ -41,7 +41,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "copy_ CALL_CENTER",
+						"name": "copy_ CATALOG_RETURNS",
 						"type": "ExecuteDataFlow",
 						"dependsOn": [],
 						"policy": {
@@ -54,12 +54,12 @@
 						"userProperties": [],
 						"typeProperties": {
 							"dataflow": {
-								"referenceName": "1_ CALL_CENTER",
+								"referenceName": "CATALOG_RETURNS",
 								"type": "DataFlowReference",
 								"parameters": {},
 								"datasetParameters": {
-									"snowflakecallcenter": {},
-									"callcentertable": {}
+									"Snowflakecatalogreturns": {},
+									"LakeHouseCatalogReturns": {}
 								}
 							},
 							"staging": {},
@@ -78,8 +78,192 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('workspaceId'), '/dataflows/1_ CALL_CENTER')]",
+				"[concat(variables('workspaceId'), '/dataflows/CATALOG_RETURNS')]",
 				"[concat(variables('workspaceId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/CATALOG_RETURNS')]",
+			"type": "Microsoft.Synapse/workspaces/datasets",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SnowflakeSales",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SnowflakeTable",
+				"schema": [
+					{
+						"name": "CR_RETURNED_DATE_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_RETURNED_TIME_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_ITEM_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_REFUNDED_CUSTOMER_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_REFUNDED_CDEMO_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_REFUNDED_HDEMO_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_REFUNDED_ADDR_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_RETURNING_CUSTOMER_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_RETURNING_CDEMO_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_RETURNING_HDEMO_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_RETURNING_ADDR_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_CALL_CENTER_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_CATALOG_PAGE_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_SHIP_MODE_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_WAREHOUSE_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_REASON_SK",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_ORDER_NUMBER",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_RETURN_QUANTITY",
+						"type": "NUMBER",
+						"precision": 38,
+						"scale": 0
+					},
+					{
+						"name": "CR_RETURN_AMOUNT",
+						"type": "NUMBER",
+						"precision": 7,
+						"scale": 2
+					},
+					{
+						"name": "CR_RETURN_TAX",
+						"type": "NUMBER",
+						"precision": 7,
+						"scale": 2
+					},
+					{
+						"name": "CR_RETURN_AMT_INC_TAX",
+						"type": "NUMBER",
+						"precision": 7,
+						"scale": 2
+					},
+					{
+						"name": "CR_FEE",
+						"type": "NUMBER",
+						"precision": 7,
+						"scale": 2
+					},
+					{
+						"name": "CR_RETURN_SHIP_COST",
+						"type": "NUMBER",
+						"precision": 7,
+						"scale": 2
+					},
+					{
+						"name": "CR_REFUNDED_CASH",
+						"type": "NUMBER",
+						"precision": 7,
+						"scale": 2
+					},
+					{
+						"name": "CR_REVERSED_CHARGE",
+						"type": "NUMBER",
+						"precision": 7,
+						"scale": 2
+					},
+					{
+						"name": "CR_STORE_CREDIT",
+						"type": "NUMBER",
+						"precision": 7,
+						"scale": 2
+					},
+					{
+						"name": "CR_NET_LOSS",
+						"type": "NUMBER",
+						"precision": 7,
+						"scale": 2
+					}
+				],
+				"typeProperties": {
+					"schema": "TPCDS_SF100TCL",
+					"table": "CATALOG_RETURNS"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/linkedServices/SnowflakeSales')]"
 			]
 		},
 		{
@@ -289,6 +473,64 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('workspaceName'), '/CATALOG_RETURNS')]",
+			"type": "Microsoft.Synapse/workspaces/dataflows",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"type": "MappingDataFlow",
+				"typeProperties": {
+					"sources": [
+						{
+							"dataset": {
+								"referenceName": "CATALOG_RETURNS",
+								"type": "DatasetReference"
+							},
+							"name": "Snowflakecatalogreturns"
+						}
+					],
+					"sinks": [
+						{
+							"linkedService": {
+								"referenceName": "mj-synpase-lakehouse-WorkspaceDefaultStorage",
+								"type": "LinkedServiceReference"
+							},
+							"name": "LakeHouseCatalogReturns"
+						}
+					],
+					"transformations": [],
+					"scriptLines": [
+						"source(allowSchemaDrift: true,",
+						"     validateSchema: false,",
+						"     limit: 0,",
+						"     query: 'SELECT * from SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CATALOG_RETURNS',",
+						"     format: 'query') ~> Snowflakecatalogreturns",
+						"Snowflakecatalogreturns sink(allowSchemaDrift: true,",
+						"     validateSchema: false,",
+						"     format: 'delta',",
+						"     fileSystem: 'lakeshouse',",
+						"     folderPath: 'synapse/workspaces/mj-synpase-lakehouse/Bronze/CatalogReturns',",
+						"     mergeSchema: false,",
+						"     autoCompact: false,",
+						"     optimizedWrite: false,",
+						"     vacuum: 0,",
+						"     deletable:false,",
+						"     insertable:true,",
+						"     updateable:false,",
+						"     upsertable:false,",
+						"     umask: 0022,",
+						"     preCommands: [],",
+						"     postCommands: [],",
+						"     skipDuplicateMapInputs: true,",
+						"     skipDuplicateMapOutputs: true) ~> LakeHouseCatalogReturns"
+					]
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/datasets/CATALOG_RETURNS')]",
+				"[concat(variables('workspaceId'), '/linkedServices/mj-synpase-lakehouse-WorkspaceDefaultStorage')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('workspaceName'), '/WorkspaceSystemIdentity')]",
 			"type": "Microsoft.Synapse/workspaces/credentials",
 			"apiVersion": "2019-06-01-preview",
@@ -356,8 +598,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_CALL_CENTER_ID",
@@ -369,8 +610,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_REC_START_DATE",
@@ -382,8 +622,7 @@
 												"DateFormat": "YYYY-MM-DD",
 												"HIVE_TYPE_STRING": "date"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_REC_END_DATE",
@@ -395,8 +634,7 @@
 												"DateFormat": "YYYY-MM-DD",
 												"HIVE_TYPE_STRING": "date"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_CLOSED_DATE_SK",
@@ -409,8 +647,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_OPEN_DATE_SK",
@@ -423,8 +660,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_NAME",
@@ -436,8 +672,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_CLASS",
@@ -449,8 +684,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_EMPLOYEES",
@@ -463,8 +697,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_SQ_FT",
@@ -477,8 +710,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_HOURS",
@@ -490,8 +722,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_MANAGER",
@@ -503,8 +734,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_MKT_ID",
@@ -517,8 +747,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_MKT_CLASS",
@@ -530,8 +759,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_MKT_DESC",
@@ -543,8 +771,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_MARKET_MANAGER",
@@ -556,8 +783,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_DIVISION",
@@ -570,8 +796,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_DIVISION_NAME",
@@ -583,8 +808,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_COMPANY",
@@ -597,8 +821,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_COMPANY_NAME",
@@ -610,8 +833,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_STREET_NUMBER",
@@ -623,8 +845,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_STREET_NAME",
@@ -636,8 +857,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_STREET_TYPE",
@@ -649,8 +869,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_SUITE_NUMBER",
@@ -662,8 +881,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_CITY",
@@ -675,8 +893,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_COUNTY",
@@ -688,8 +905,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_STATE",
@@ -701,8 +917,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_ZIP",
@@ -714,8 +929,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_COUNTRY",
@@ -727,8 +941,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_GMT_OFFSET",
@@ -741,8 +954,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CC_TAX_PERCENTAGE",
@@ -755,8 +967,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									}
 								],
 								"Format": {
