@@ -25,7 +25,6 @@
 			"scriptLines": [
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     limit: 0,",
 				"     query: 'SELECT * from SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CATALOG_RETURNS',",
 				"     format: 'query') ~> Snowflakecatalogreturns",
 				"Snowflakecatalogreturns sink(allowSchemaDrift: true,",
