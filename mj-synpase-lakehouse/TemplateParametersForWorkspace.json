@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "mj-synpase-lakehouse"
+		},
+		"SnowflakeSales_connectionString": {
+			"value": ""
+		},
+		"cdcs-spark-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:cdcs-spark.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"mj-synpase-lakehouse-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:mj-synpase-lakehouse.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"cdcs-spark-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://cdcdemostorage.dfs.core.windows.net"
+		},
+		"mj-synpase-lakehouse-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://mjlakeshousestroage.dfs.core.windows.net"
+		}
+	}
+}
