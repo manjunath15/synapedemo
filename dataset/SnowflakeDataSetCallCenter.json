@@ -1,0 +1,16 @@
+{
+	"name": "SnowflakeDataSetCallCenter",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SnowflakeSales",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "TPCDS_SF100TCL",
+			"table": "CALL_CENTER"
+		}
+	}
+}
