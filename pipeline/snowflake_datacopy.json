@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "copy_ CALL_CENTER",
+				"name": "copy_ CATALOG_RETURNS",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "1_ CALL_CENTER",
+						"referenceName": "CATALOG_RETURNS",
 						"type": "DataFlowReference"
 					},
 					"integrationRuntime": {

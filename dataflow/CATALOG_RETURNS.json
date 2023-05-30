@@ -1,0 +1,52 @@
+{
+	"name": "CATALOG_RETURNS",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "CATALOG_RETURNS",
+						"type": "DatasetReference"
+					},
+					"name": "Snowflakecatalogreturns"
+				}
+			],
+			"sinks": [
+				{
+					"linkedService": {
+						"referenceName": "mj-synpase-lakehouse-WorkspaceDefaultStorage",
+						"type": "LinkedServiceReference"
+					},
+					"name": "LakeHouseCatalogReturns"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     limit: 0,",
+				"     query: 'SELECT * from SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CATALOG_RETURNS',",
+				"     format: 'query') ~> Snowflakecatalogreturns",
+				"Snowflakecatalogreturns sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'delta',",
+				"     fileSystem: 'lakeshouse',",
+				"     folderPath: 'synapse/workspaces/mj-synpase-lakehouse/Bronze/CatalogReturns',",
+				"     mergeSchema: false,",
+				"     autoCompact: false,",
+				"     optimizedWrite: false,",
+				"     vacuum: 0,",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> LakeHouseCatalogReturns"
+			]
+		}
+	}
+}

@@ -1,0 +1,179 @@
+{
+	"name": "CATALOG_RETURNS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SnowflakeSales",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeTable",
+		"schema": [
+			{
+				"name": "CR_RETURNED_DATE_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_RETURNED_TIME_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_ITEM_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_REFUNDED_CUSTOMER_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_REFUNDED_CDEMO_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_REFUNDED_HDEMO_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_REFUNDED_ADDR_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_RETURNING_CUSTOMER_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_RETURNING_CDEMO_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_RETURNING_HDEMO_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_RETURNING_ADDR_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_CALL_CENTER_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_CATALOG_PAGE_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_SHIP_MODE_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_WAREHOUSE_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_REASON_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_ORDER_NUMBER",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_RETURN_QUANTITY",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CR_RETURN_AMOUNT",
+				"type": "NUMBER",
+				"precision": 7,
+				"scale": 2
+			},
+			{
+				"name": "CR_RETURN_TAX",
+				"type": "NUMBER",
+				"precision": 7,
+				"scale": 2
+			},
+			{
+				"name": "CR_RETURN_AMT_INC_TAX",
+				"type": "NUMBER",
+				"precision": 7,
+				"scale": 2
+			},
+			{
+				"name": "CR_FEE",
+				"type": "NUMBER",
+				"precision": 7,
+				"scale": 2
+			},
+			{
+				"name": "CR_RETURN_SHIP_COST",
+				"type": "NUMBER",
+				"precision": 7,
+				"scale": 2
+			},
+			{
+				"name": "CR_REFUNDED_CASH",
+				"type": "NUMBER",
+				"precision": 7,
+				"scale": 2
+			},
+			{
+				"name": "CR_REVERSED_CHARGE",
+				"type": "NUMBER",
+				"precision": 7,
+				"scale": 2
+			},
+			{
+				"name": "CR_STORE_CREDIT",
+				"type": "NUMBER",
+				"precision": 7,
+				"scale": 2
+			},
+			{
+				"name": "CR_NET_LOSS",
+				"type": "NUMBER",
+				"precision": 7,
+				"scale": 2
+			}
+		],
+		"typeProperties": {
+			"schema": "TPCDS_SF100TCL",
+			"table": "CATALOG_RETURNS"
+		}
+	}
+}
