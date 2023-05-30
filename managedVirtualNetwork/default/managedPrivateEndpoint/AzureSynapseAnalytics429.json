@@ -1,0 +1,10 @@
+{
+	"name": "AzureSynapseAnalytics429",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/5da56296-3f08-41d0-8ff2-abe03c8acb49/resourceGroups/cdcdemo/providers/Microsoft.Synapse/workspaces/cdcs-spark",
+		"groupId": "dev",
+		"fqdns": [
+			"cdcs-spark.dev.azuresynapse.net"
+		]
+	}
+}

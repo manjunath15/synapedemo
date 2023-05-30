@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-custstgacct--cdcs-spark-cdcdemostorage",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/5da56296-3f08-41d0-8ff2-abe03c8acb49/resourceGroups/cdcdemo/providers/Microsoft.Storage/storageAccounts/cdcdemostorage",
+		"groupId": "dfs",
+		"fqdns": [
+			"cdcdemostorage.dfs.core.windows.net"
+		]
+	}
+}

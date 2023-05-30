@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-sql--cdcs-spark",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/5da56296-3f08-41d0-8ff2-abe03c8acb49/resourceGroups/cdcdemo/providers/Microsoft.Synapse/workspaces/cdcs-spark",
+		"groupId": "sql",
+		"fqdns": [
+			"cdcs-spark.f78c8b30-ee00-41c7-bcf6-6bca37949fec.sql.azuresynapse.net"
+		]
+	}
+}
