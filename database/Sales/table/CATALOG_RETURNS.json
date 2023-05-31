@@ -16,13 +16,11 @@
 				{
 					"Name": "CR_RETURNED_DATE_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -30,13 +28,11 @@
 				{
 					"Name": "CR_RETURNED_TIME_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -44,13 +40,11 @@
 				{
 					"Name": "CR_ITEM_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -58,13 +52,11 @@
 				{
 					"Name": "CR_REFUNDED_CUSTOMER_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -72,13 +64,11 @@
 				{
 					"Name": "CR_REFUNDED_CDEMO_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -86,13 +76,11 @@
 				{
 					"Name": "CR_REFUNDED_HDEMO_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -100,13 +88,11 @@
 				{
 					"Name": "CR_REFUNDED_ADDR_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -114,13 +100,11 @@
 				{
 					"Name": "CR_RETURNING_CUSTOMER_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -128,13 +112,11 @@
 				{
 					"Name": "CR_RETURNING_CDEMO_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -142,13 +124,11 @@
 				{
 					"Name": "CR_RETURNING_HDEMO_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -156,13 +136,11 @@
 				{
 					"Name": "CR_RETURNING_ADDR_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -170,13 +148,11 @@
 				{
 					"Name": "CR_CALL_CENTER_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -184,13 +160,11 @@
 				{
 					"Name": "CR_CATALOG_PAGE_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -198,13 +172,11 @@
 				{
 					"Name": "CR_SHIP_MODE_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -212,13 +184,11 @@
 				{
 					"Name": "CR_WAREHOUSE_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -226,13 +196,11 @@
 				{
 					"Name": "CR_REASON_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -240,13 +208,11 @@
 				{
 					"Name": "CR_ORDER_NUMBER",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -254,13 +220,11 @@
 				{
 					"Name": "CR_RETURN_QUANTITY",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 38,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -268,13 +232,11 @@
 				{
 					"Name": "CR_RETURN_AMOUNT",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 7,
-						"Scale": 2,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -282,13 +244,11 @@
 				{
 					"Name": "CR_RETURN_TAX",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 7,
-						"Scale": 2,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -296,13 +256,11 @@
 				{
 					"Name": "CR_RETURN_AMT_INC_TAX",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 7,
-						"Scale": 2,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -310,13 +268,11 @@
 				{
 					"Name": "CR_FEE",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 7,
-						"Scale": 2,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -324,13 +280,11 @@
 				{
 					"Name": "CR_RETURN_SHIP_COST",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 7,
-						"Scale": 2,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -338,13 +292,11 @@
 				{
 					"Name": "CR_REFUNDED_CASH",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 7,
-						"Scale": 2,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -352,13 +304,11 @@
 				{
 					"Name": "CR_REVERSED_CHARGE",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 7,
-						"Scale": 2,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -366,13 +316,11 @@
 				{
 					"Name": "CR_STORE_CREDIT",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 7,
-						"Scale": 2,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -380,13 +328,11 @@
 				{
 					"Name": "CR_NET_LOSS",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 7,
-						"Scale": 2,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "long"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
@@ -412,7 +358,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{}}"
 			},
 			"Compressed": false,
