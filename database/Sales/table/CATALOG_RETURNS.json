@@ -44,13 +44,11 @@
 				{
 					"Name": "CR_ITEM_SK",
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 118,
-						"Scale": 2,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "integer"
 						}
 					},
 					"DeltaFormatInvalidMessages": []
