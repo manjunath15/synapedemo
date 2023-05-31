@@ -627,7 +627,7 @@
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
 				"content": {
-					"query": "SELECT TOP (100) [CR_RETURNED_DATE_SK]\n,[CR_RETURNED_TIME_SK]\n,[CR_ITEM_SK]\n,[CR_REFUNDED_CUSTOMER_SK]\n,[CR_REFUNDED_CDEMO_SK]\n,[CR_REFUNDED_HDEMO_SK]\n,[CR_REFUNDED_ADDR_SK]\n,[CR_RETURNING_CUSTOMER_SK]\n,[CR_RETURNING_CDEMO_SK]\n,[CR_RETURNING_HDEMO_SK]\n,[CR_RETURNING_ADDR_SK]\n,[CR_CALL_CENTER_SK]\n,[CR_CATALOG_PAGE_SK]\n,[CR_SHIP_MODE_SK]\n,[CR_WAREHOUSE_SK]\n,[CR_REASON_SK]\n,[CR_ORDER_NUMBER]\n,[CR_RETURN_QUANTITY]\n,[CR_RETURN_AMOUNT]\n,[CR_RETURN_TAX]\n,[CR_RETURN_AMT_INC_TAX]\n,[CR_FEE]\n,[CR_RETURN_SHIP_COST]\n,[CR_REFUNDED_CASH]\n,[CR_REVERSED_CHARGE]\n,[CR_STORE_CREDIT]\n,[CR_NET_LOSS]\n FROM [Sales].[dbo].[CATALOG_RETURNS]",
+					"query": "SELECT COUNT(*)\n FROM [Sales].[dbo].[CATALOG_RETURNS]",
 					"metadata": {
 						"language": "sql"
 					},
@@ -1189,13 +1189,11 @@
 									{
 										"Name": "CR_ITEM_SK",
 										"OriginDataTypeName": {
-											"TypeName": "decimal",
+											"TypeName": "integer",
 											"IsComplexType": false,
 											"IsNullable": true,
-											"Precision": 118,
-											"Scale": 2,
 											"Properties": {
-												"HIVE_TYPE_STRING": "decimal"
+												"HIVE_TYPE_STRING": "integer"
 											}
 										},
 										"DeltaFormatInvalidMessages": []
