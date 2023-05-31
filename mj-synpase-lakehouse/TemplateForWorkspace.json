@@ -602,6 +602,26 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('workspaceName'), '/SQL script 4')]",
+			"type": "Microsoft.Synapse/workspaces/sqlscripts",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"content": {
+					"query": "SELECT COUNT(CR_ITEM_SK) FROM [Sales].[dbo].[CATALOG_RETURNS]",
+					"metadata": {
+						"language": "sql"
+					},
+					"currentConnection": {
+						"databaseName": "Sales",
+						"poolName": "Built-in"
+					},
+					"resultLimit": -1
+				},
+				"type": "SqlQuery"
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('workspaceName'), '/Sales')]",
 			"type": "Microsoft.Synapse/workspaces/databases",
 			"apiVersion": "2019-06-01-preview",
@@ -1121,11 +1141,11 @@
 									{
 										"Name": "CR_RETURNED_DATE_SK",
 										"OriginDataTypeName": {
-											"TypeName": "long",
+											"TypeName": "double",
 											"IsComplexType": false,
 											"IsNullable": true,
 											"Properties": {
-												"HIVE_TYPE_STRING": "long"
+												"HIVE_TYPE_STRING": "double"
 											}
 										},
 										"DeltaFormatInvalidMessages": []
@@ -1133,11 +1153,11 @@
 									{
 										"Name": "CR_RETURNED_TIME_SK",
 										"OriginDataTypeName": {
-											"TypeName": "long",
+											"TypeName": "double",
 											"IsComplexType": false,
 											"IsNullable": true,
 											"Properties": {
-												"HIVE_TYPE_STRING": "long"
+												"HIVE_TYPE_STRING": "double"
 											}
 										},
 										"DeltaFormatInvalidMessages": []
@@ -1145,11 +1165,11 @@
 									{
 										"Name": "CR_ITEM_SK",
 										"OriginDataTypeName": {
-											"TypeName": "long",
+											"TypeName": "double",
 											"IsComplexType": false,
 											"IsNullable": true,
 											"Properties": {
-												"HIVE_TYPE_STRING": "long"
+												"HIVE_TYPE_STRING": "double"
 											}
 										},
 										"DeltaFormatInvalidMessages": []
@@ -1157,11 +1177,11 @@
 									{
 										"Name": "CR_REFUNDED_CUSTOMER_SK",
 										"OriginDataTypeName": {
-											"TypeName": "long",
+											"TypeName": "double",
 											"IsComplexType": false,
 											"IsNullable": true,
 											"Properties": {
-												"HIVE_TYPE_STRING": "long"
+												"HIVE_TYPE_STRING": "double"
 											}
 										},
 										"DeltaFormatInvalidMessages": []
@@ -1169,11 +1189,11 @@
 									{
 										"Name": "CR_REFUNDED_CDEMO_SK",
 										"OriginDataTypeName": {
-											"TypeName": "long",
+											"TypeName": "double",
 											"IsComplexType": false,
 											"IsNullable": true,
 											"Properties": {
-												"HIVE_TYPE_STRING": "long"
+												"HIVE_TYPE_STRING": "double"
 											}
 										},
 										"DeltaFormatInvalidMessages": []
@@ -1181,11 +1201,11 @@
 									{
 										"Name": "CR_REFUNDED_HDEMO_SK",
 										"OriginDataTypeName": {
-											"TypeName": "long",
+											"TypeName": "double",
 											"IsComplexType": false,
 											"IsNullable": true,
 											"Properties": {
-												"HIVE_TYPE_STRING": "long"
+												"HIVE_TYPE_STRING": "double"
 											}
 										},
 										"DeltaFormatInvalidMessages": []
