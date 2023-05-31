@@ -20,10 +20,11 @@
 						"type": "DataFlowReference"
 					},
 					"integrationRuntime": {
-						"referenceName": "AutoResolveIntegrationRuntime",
+						"referenceName": "IntegrationRuntimewithgoodcluster",
 						"type": "IntegrationRuntimeReference"
 					},
-					"traceLevel": "Fine"
+					"traceLevel": "Fine",
+					"runConcurrently": true
 				}
 			}
 		],

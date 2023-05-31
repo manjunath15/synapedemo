@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP (100) [CC_CALL_CENTER_SK]\n,[CC_CALL_CENTER_ID]\n,[CC_REC_START_DATE]\n,[CC_REC_END_DATE]\n,[CC_CLOSED_DATE_SK]\n,[CC_OPEN_DATE_SK]\n,[CC_NAME]\n,[CC_CLASS]\n,[CC_EMPLOYEES]\n,[CC_SQ_FT]\n,[CC_HOURS]\n,[CC_MANAGER]\n,[CC_MKT_ID]\n,[CC_MKT_CLASS]\n,[CC_MKT_DESC]\n,[CC_MARKET_MANAGER]\n,[CC_DIVISION]\n,[CC_DIVISION_NAME]\n,[CC_COMPANY]\n,[CC_COMPANY_NAME]\n,[CC_STREET_NUMBER]\n,[CC_STREET_NAME]\n,[CC_STREET_TYPE]\n,[CC_SUITE_NUMBER]\n,[CC_CITY]\n,[CC_COUNTY]\n,[CC_STATE]\n,[CC_ZIP]\n,[CC_COUNTRY]\n,[CC_GMT_OFFSET]\n,[CC_TAX_PERCENTAGE]\n FROM [Sales].[dbo].[CALL_CENTER]\n\n select [CC_ZIP] as [Zip], COUNT(*) as [Count of Call Centers]from [Sales].[dbo].[CALL_CENTER] group by [CC_ZIP] order by [Count of Call Centers] DESC",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "Sales",
+				"poolName": "Built-in"
+			},
+			"resultLimit": -1
+		},
+		"type": "SqlQuery"
+	}
+}
